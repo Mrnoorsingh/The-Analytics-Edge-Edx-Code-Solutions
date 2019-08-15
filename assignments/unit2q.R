@@ -1,0 +1,8 @@
+setwd("/home/noor/Downloads")
+moneyball=read.csv("baseball.csv")
+sub=subset(moneyball,Year<2002)
+model=lm(RS~OBP+SLG,data=sub)
+rank<-c(1,2,3,3,4,4,4,4,5,5)
+wins2012<-c(94,88,95,88,93,94,98,97,93,94)
+wins2013<-c(97,97,92,93,92,96,94,96,92,90)
+cor(rank,wins2013)
